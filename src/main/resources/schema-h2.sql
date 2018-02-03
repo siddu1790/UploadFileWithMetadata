@@ -1,0 +1,1 @@
+create table fileModel(id integer not null auto_increment, filetype varchar(255), description varchar(255), filename varchar(255), file BLOB(2147483647))

@@ -1,6 +1,8 @@
-package com.fileupload.db;
+package com.fileupload.service;
 
 import java.util.List;
+
+import com.fileupload.domain.FileModel;
 
 public interface FileService {
 	

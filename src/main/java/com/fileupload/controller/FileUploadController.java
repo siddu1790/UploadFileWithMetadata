@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.fileupload.db.FileModel;
-import com.fileupload.db.FileService;
+import com.fileupload.domain.FileModel;
+import com.fileupload.service.FileService;
 
 @Controller
 public class FileUploadController {
@@ -57,7 +57,6 @@ public class FileUploadController {
 			@RequestParam(value = "type", required = false) String fileType,
 			@RequestParam(value = "description", required = false) String description,
 			RedirectAttributes redirectAttributes) throws IOException {
-
 		byte[] byteArr = file.getBytes();
 		FileModel fileModel = new FileModel(fileType, description, file.getOriginalFilename(), byteArr);
 		fileService.save(fileModel);

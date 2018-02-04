@@ -1,4 +1,4 @@
-package com.fileupload.serviceTests;
+package com.fileupload.service;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,9 +13,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.fileupload.db.FileModel;
-import com.fileupload.db.FileServiceImpl;
-import com.fileupload.db.FileUploadRepository;
+import com.fileupload.domain.FileModel;
+import com.fileupload.repository.FileUploadRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest

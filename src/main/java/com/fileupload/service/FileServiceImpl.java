@@ -1,9 +1,12 @@
-package com.fileupload.db;
+package com.fileupload.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.fileupload.domain.FileModel;
+import com.fileupload.repository.FileUploadRepository;
 
 @Service
 public class FileServiceImpl implements FileService{

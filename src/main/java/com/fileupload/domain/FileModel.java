@@ -1,4 +1,4 @@
-package com.fileupload.db;
+package com.fileupload.domain;
 
 import java.sql.Blob;
 

@@ -1,4 +1,4 @@
-package com.fileupload.controllerTests;
+package com.fileupload.controller;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,9 +20,9 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.fileupload.controller.FileUploadController;
-import com.fileupload.db.FileModel;
-import com.fileupload.db.FileService;
-import com.fileupload.db.FileUploadRepository;
+import com.fileupload.domain.FileModel;
+import com.fileupload.repository.FileUploadRepository;
+import com.fileupload.service.FileService;
 
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
@@ -73,4 +73,5 @@ public class FileUploadControllerTest {
 		Mockito.verify(redirectAttributes, Mockito.times(1)).addFlashAttribute("message", "You successfully uploaded " + file.getOriginalFilename() +"!");
 		assertEquals("redirect:/", viewName);
 	}
+	
 }
